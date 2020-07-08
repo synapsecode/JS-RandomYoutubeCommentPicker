@@ -1,0 +1,180 @@
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(31, 31, 31);
+	color: white;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.linkItem{
+	margin: 20px 10px;
+	display: flex;
+}
+
+#linkbox{
+	margin-right: -5px;
+	outline: none;
+	border: none;
+	font-size: 20px;
+	height: 45px;
+	padding: none;
+	color: rgba(255, 255, 255, 0.596);
+}
+
+#linkbox:focus{
+    -webkit-appearance:none;
+    box-shadow: none !important;
+	outline: 1px solid crimson;
+}
+
+main{
+	height: 82%;
+	margin: -20px 10px 0px 10px;
+	padding: 20px 0px;
+	display: flex;
+}
+
+#ytdisplay{
+	border: 1px solid crimson;
+	flex:1;
+	margin-right: 10px;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.281);
+	overflow-y: auto;
+}
+
+#ytdisplay::-webkit-scrollbar {
+	width: 1em;
+}
+
+#ytdisplay::-webkit-scrollbar-thumb {
+  background-color: rgba(220, 20, 60, 0.568);
+}
+
+#selectedCommentSection{
+	flex:2;
+	border: 1px solid crimson;
+	padding: 10px;
+}
+
+#ythumbnailsection{
+	border: 1px solid crimson;
+	width: 100%;
+	height: 250px;
+}
+#ythumbnailsection > img{
+	width: 100%;
+	height: 100%;
+}
+
+#videoTitle{
+	background-color: rgba(0, 0, 0, 0.164);
+	margin: 5px 0 10px 0;
+	padding: 5px;
+	border-radius: 5px;
+	color: rgba(255, 255, 255, 0.534);
+	
+}
+
+.ac{
+	color: rgba(255, 255, 255, 0.534);
+	width: 170px;
+	padding: 2px 5px;
+}
+
+#commentCount{
+	color: crimson;
+	font-size: 65px;
+}
+
+#selectCommentCount{
+	margin-top: 10px;
+	width: 380px;
+	border: 1px solid crimson;
+	color: rgba(255, 255, 255, 0.534);
+}
+
+#selectCommentBtn{
+	width: 380px;
+	margin-top: 10px;
+}
+
+.x{
+	color: rgba(255, 255, 255, 0.849);
+}
+
+#selectedCommentPanel{
+	border: 1px solid #333;
+	height: 85%;
+	overflow-y: auto;
+}
+
+#selectedCommentPanel::-webkit-scrollbar {
+	width: 1em;
+}
+
+#selectedCommentPanel::-webkit-scrollbar-thumb {
+  background-color: rgba(220, 20, 60, 0.568);
+}
+
+.displayPicture{
+	height: 80px;
+	width: 80px;
+	border: 1px solid #333;
+	border-radius: 50%;
+	
+}
+
+ul{
+	margin: 0;
+	padding: 10px;
+	background-color: transparent;
+}
+
+.dpGroup{
+	flex:2;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 20px;
+}
+.commentGroup{
+	flex: 18;
+}
+.userName:hover{
+	text-decoration: none;
+}
+.litem{
+	padding: 10px;
+	list-style: none;
+	background-color: #333;
+}
+.litem:hover{
+	background-color: rgb(24, 24, 24);
+}
+
+#ssc{
+	overflow-y: auto;
+}
+
+#loader{
+	visibility: hidden;
+}

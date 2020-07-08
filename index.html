@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>YoutubeCommentPicker</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="app.loadClient()">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-danger" style="height:60px;">
+		<a class="navbar-brand" href="#">Youtube Comment Picker</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Features</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Pricing</a>
+			</li>
+		  </ul>
+		</div>
+	</nav>
+	<div class="linkItem">
+		<input type="text" id="linkbox" class="form-control bg-dark" placeholder="Enter the Youtube video link here!" spellcheck="false">
+		<input type="button" value="Load Comments" class="btn btn-danger" id="loadVideoBtn" onclick="app.loadVideo();">
+	</div>
+	<main>
+		<section id="ytdisplay">
+			<section id="ythumbnailsection">
+				<img src="" alt="" id="ytthumbnail">
+			</section>
+			<center>
+				<h5 id="videoTitle">Video Title</h5>
+				<h5 class="ac">Total Comments: <span id="commentCount">0</span></h5>
+				<input type="number" id="selectCommentCount" class="form-control bg-dark text-light" placeholder="No of comments to select">
+				<input type="button" id="selectCommentBtn" value="Pick Random Winners" class="btn btn-outline-danger" onclick="app.pickRandomComments();">
+			</center>
+		</section>
+		<section id="selectedCommentSection">
+			<h1 class="display-4 x">
+				Selected Comments
+				<div class="spinner-grow text-danger mb-3 mt-1" role="status" id="loader">
+					<span class="sr-only">Loading...</span>
+				</div>
+			</h1>
+			<section id="selectedCommentPanel">
+				<ul class="list-group" id="selectedCommentList">
+					<!--Selected Comments go here-->
+				</ul>
+			</section>
+		</section>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="gapi.js"></script>
+	<script src="runner.js"></script>
+</body>
+</html>
